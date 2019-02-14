@@ -20,7 +20,7 @@ export default {
       const visible = window.innerHeight;
       const pageHeight = document.documentElement.offsetHeight;
       const bottomOfPage = visible + scrollY >= pageHeight;
-      if (scrollY <=1) {
+      if (scrollY ===0) {
         window.location.reload();
       }
       return bottomOfPage || pageHeight < visible;
