@@ -1,9 +1,7 @@
 <template>
-  <div>
     <div class="demo-scroll">
       <div class="demo-content" v-for="(item, index) in list1" :key="index">Content {{ item }}</div>
     </div>
-  </div>
 </template>
 <script>
 export default {
@@ -20,9 +18,6 @@ export default {
       const visible = window.innerHeight;
       const pageHeight = document.documentElement.offsetHeight;
       const bottomOfPage = visible + scrollY >= pageHeight;
-      if (scrollY ===0) {
-        window.location.reload();
-      }
       return bottomOfPage || pageHeight < visible;
     },
 
